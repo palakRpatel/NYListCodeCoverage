@@ -1,0 +1,149 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: NYTimesListActivity</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.example.nytimesapp</a> ]
+</div>
+
+<h1>Coverage Summary for Class: NYTimesListActivity (com.example.nytimesapp)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">NYTimesListActivity</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 16)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.example.nytimesapp;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import android.app.Activity;
+<i>4</i>&nbsp;import android.app.ProgressDialog;
+<i>5</i>&nbsp;import android.os.Bundle;
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;import androidx.appcompat.app.AppCompatActivity;
+<i>8</i>&nbsp;import androidx.appcompat.widget.Toolbar;
+<i>9</i>&nbsp;import androidx.recyclerview.widget.LinearLayoutManager;
+<i>10</i>&nbsp;import androidx.recyclerview.widget.RecyclerView;
+<i>11</i>&nbsp;
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;import com.android.volley.toolbox.Volley;
+<i>14</i>&nbsp;import com.example.nytimesapp.adapter.NYListAdapter;
+<i>15</i>&nbsp;import com.example.nytimesapp.data.NYListResponse;
+<i>16</i>&nbsp;import com.example.nytimesapp.repository.NYTimeListRepository;
+<i>17</i>&nbsp;import com.example.nytimesapp.remote.NYTimeListRemoteDataSource;
+<i>18</i>&nbsp;
+<b class="nc"><i>19</i>&nbsp;public class NYTimesListActivity extends AppCompatActivity implements NYTimesListContract.View {</b>
+<i>20</i>&nbsp;
+<i>21</i>&nbsp;    private RecyclerView recyclerView;
+<i>22</i>&nbsp;    private NYTimesListContract.Presenter presenter;
+<i>23</i>&nbsp;    private ProgressDialog progressDialog;
+<i>24</i>&nbsp;
+<i>25</i>&nbsp;    @Override
+<i>26</i>&nbsp;    protected void onCreate(Bundle savedInstanceState) {
+<b class="nc"><i>27</i>&nbsp;        super.onCreate(savedInstanceState);</b>
+<b class="nc"><i>28</i>&nbsp;        setContentView(R.layout.nytimes_list_activity);</b>
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+<i>31</i>&nbsp;//        setSupportActionBar(toolbar)toolbar;
+<b class="nc"><i>32</i>&nbsp;        NYTimeListRepository nyTimeListRepository = NYTimeListRepository.getInstance(NYTimeListRemoteDataSource.getInstance(Volley.newRequestQueue(this)));</b>
+<b class="nc"><i>33</i>&nbsp;        presenter = new NYTimesListPresenter(this, nyTimeListRepository);</b>
+<i>34</i>&nbsp;    }
+<i>35</i>&nbsp;
+<i>36</i>&nbsp;    @Override
+<i>37</i>&nbsp;    public void init() {
+<b class="nc"><i>38</i>&nbsp;        recyclerView = findViewById(R.id.recyler_nytimes);</b>
+<b class="nc"><i>39</i>&nbsp;        progressDialog=new ProgressDialog(this);</b>
+<b class="nc"><i>40</i>&nbsp;        presenter.callNYListRepostitory();</b>
+<i>41</i>&nbsp;    }
+<i>42</i>&nbsp;
+<i>43</i>&nbsp;    @Override
+<i>44</i>&nbsp;    public void setPresenter(NYTimesListContract.Presenter presenter) {
+<b class="nc"><i>45</i>&nbsp;        this.presenter = presenter;</b>
+<b class="nc"><i>46</i>&nbsp;        presenter.start();</b>
+<i>47</i>&nbsp;    }
+<i>48</i>&nbsp;
+<i>49</i>&nbsp;    @Override
+<i>50</i>&nbsp;    public void setAdapter(NYListResponse nyListResponse) {
+<b class="nc"><i>51</i>&nbsp;        NYListAdapter nyListAdapter = new NYListAdapter(nyListResponse);</b>
+<b class="nc"><i>52</i>&nbsp;        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);</b>
+<b class="nc"><i>53</i>&nbsp;        recyclerView.setLayoutManager(layoutManager);</b>
+<b class="nc"><i>54</i>&nbsp;        recyclerView.setAdapter(nyListAdapter);</b>
+<i>55</i>&nbsp;    }
+<i>56</i>&nbsp;
+<i>57</i>&nbsp;    @Override
+<i>58</i>&nbsp;    public void showProgressDialog(){
+<b class="nc"><i>59</i>&nbsp;        progressDialog.show();</b>
+<i>60</i>&nbsp;    }
+<i>61</i>&nbsp;
+<i>62</i>&nbsp;    @Override
+<i>63</i>&nbsp;    public void hideProgressDialog(){
+<b class="nc"><i>64</i>&nbsp;        progressDialog.hide();</b>
+<i>65</i>&nbsp;    }
+<i>66</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2019-06-20 22:45</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: NYTimesListContract</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.example.nytimesapp</a> ]
+</div>
+
+<h1>Coverage Summary for Class: NYTimesListContract (com.example.nytimesapp)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+</tr>
+  <tr>
+    <td class="name">NYTimesListContract$Presenter</td>
+  </tr>
+  <tr>
+    <td class="name">NYTimesListContract$Presenter$$EnhancerByMockitoWithCGLIB$$6372bb2f</td>
+  </tr>
+  <tr>
+    <td class="name">NYTimesListContract$View</td>
+  </tr>
+  <tr>
+    <td class="name">NYTimesListContract$View$$EnhancerByMockitoWithCGLIB$$99b394e4</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.example.nytimesapp;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.example.nytimesapp.data.NYListResponse;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;public interface NYTimesListContract {
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;    interface Presenter {
+<i>8</i>&nbsp;        void start();
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;        void callNYListRepostitory();
+<i>11</i>&nbsp;    }
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;    interface View {
+<i>14</i>&nbsp;        void setPresenter(NYTimesListContract.Presenter presenter);
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;        void setAdapter(NYListResponse nyListResponse);
+<i>17</i>&nbsp;
+<i>18</i>&nbsp;        void init();
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;        void showProgressDialog();
+<i>21</i>&nbsp;
+<i>22</i>&nbsp;        void hideProgressDialog();
+<i>23</i>&nbsp;    }
+<i>24</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2019-06-20 22:45</div>
+</div>
+</body>
+</html>

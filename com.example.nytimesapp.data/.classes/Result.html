@@ -1,0 +1,249 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Result</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.example.nytimesapp.data</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Result (com.example.nytimesapp.data)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Result</td>
+<td class="coverageStat">
+  <span class="percent">
+    77.8%
+  </span>
+  <span class="absValue">
+    (21/ 27)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    77.5%
+  </span>
+  <span class="absValue">
+    (31/ 40)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">Result$$EnhancerByMockitoWithCGLIB$$414d68bb</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    77.8%
+  </span>
+  <span class="absValue">
+    (21/ 27)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    77.5%
+  </span>
+  <span class="absValue">
+    (31/ 40)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.example.nytimesapp.data;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.google.gson.annotations.SerializedName;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;import java.io.Serializable;
+<i>6</i>&nbsp;import java.util.ArrayList;
+<i>7</i>&nbsp;import java.util.List;
+<i>8</i>&nbsp;
+<b class="fc"><i>9</i>&nbsp;public class Result implements Serializable {</b>
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;    @SerializedName(&quot;url&quot;)
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;    private String url;
+<i>14</i>&nbsp;    @SerializedName(&quot;adx_keywords&quot;)
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;    private String adxKeywords;
+<i>17</i>&nbsp;    @SerializedName(&quot;column&quot;)
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;    private Object column;
+<i>20</i>&nbsp;    @SerializedName(&quot;section&quot;)
+<i>21</i>&nbsp;
+<i>22</i>&nbsp;    private String section;
+<i>23</i>&nbsp;    @SerializedName(&quot;byline&quot;)
+<i>24</i>&nbsp;
+<i>25</i>&nbsp;    private String byline;
+<i>26</i>&nbsp;    @SerializedName(&quot;type&quot;)
+<i>27</i>&nbsp;
+<i>28</i>&nbsp;    private String type;
+<i>29</i>&nbsp;    @SerializedName(&quot;title&quot;)
+<i>30</i>&nbsp;
+<i>31</i>&nbsp;    private String title;
+<i>32</i>&nbsp;    @SerializedName(&quot;abstract&quot;)
+<i>33</i>&nbsp;
+<i>34</i>&nbsp;    private String _abstract;
+<i>35</i>&nbsp;    @SerializedName(&quot;published_date&quot;)
+<i>36</i>&nbsp;
+<i>37</i>&nbsp;    private String publishedDate;
+<i>38</i>&nbsp;    @SerializedName(&quot;source&quot;)
+<i>39</i>&nbsp;
+<i>40</i>&nbsp;    private String source;
+<i>41</i>&nbsp;    @SerializedName(&quot;id&quot;)
+<i>42</i>&nbsp;
+<i>43</i>&nbsp;    private Long id;
+<i>44</i>&nbsp;    @SerializedName(&quot;asset_id&quot;)
+<i>45</i>&nbsp;
+<i>46</i>&nbsp;    private Long assetId;
+<i>47</i>&nbsp;    @SerializedName(&quot;views&quot;)
+<i>48</i>&nbsp;
+<i>49</i>&nbsp;    private Integer views;
+<i>50</i>&nbsp;
+<i>51</i>&nbsp;    public String getUrl() {
+<b class="fc"><i>52</i>&nbsp;        return url;</b>
+<i>53</i>&nbsp;    }
+<i>54</i>&nbsp;
+<i>55</i>&nbsp;    public void setUrl(String url) {
+<b class="fc"><i>56</i>&nbsp;        this.url = url;</b>
+<b class="fc"><i>57</i>&nbsp;    }</b>
+<i>58</i>&nbsp;
+<i>59</i>&nbsp;    public String getAdxKeywords() {
+<b class="fc"><i>60</i>&nbsp;        return adxKeywords;</b>
+<i>61</i>&nbsp;    }
+<i>62</i>&nbsp;
+<i>63</i>&nbsp;    public void setAdxKeywords(String adxKeywords) {
+<b class="fc"><i>64</i>&nbsp;        this.adxKeywords = adxKeywords;</b>
+<b class="fc"><i>65</i>&nbsp;    }</b>
+<i>66</i>&nbsp;
+<i>67</i>&nbsp;    public Object getColumn() {
+<b class="fc"><i>68</i>&nbsp;        return column;</b>
+<i>69</i>&nbsp;    }
+<i>70</i>&nbsp;
+<i>71</i>&nbsp;    public void setColumn(Object column) {
+<b class="fc"><i>72</i>&nbsp;        this.column = column;</b>
+<b class="fc"><i>73</i>&nbsp;    }</b>
+<i>74</i>&nbsp;
+<i>75</i>&nbsp;    public String getSection() {
+<b class="fc"><i>76</i>&nbsp;        return section;</b>
+<i>77</i>&nbsp;    }
+<i>78</i>&nbsp;
+<i>79</i>&nbsp;    public void setSection(String section) {
+<b class="fc"><i>80</i>&nbsp;        this.section = section;</b>
+<b class="fc"><i>81</i>&nbsp;    }</b>
+<i>82</i>&nbsp;
+<i>83</i>&nbsp;    public String getByline() {
+<b class="fc"><i>84</i>&nbsp;        return byline;</b>
+<i>85</i>&nbsp;    }
+<i>86</i>&nbsp;
+<i>87</i>&nbsp;    public void setByline(String byline) {
+<b class="fc"><i>88</i>&nbsp;        this.byline = byline;</b>
+<b class="fc"><i>89</i>&nbsp;    }</b>
+<i>90</i>&nbsp;
+<i>91</i>&nbsp;    public String getType() {
+<b class="nc"><i>92</i>&nbsp;        return type;</b>
+<i>93</i>&nbsp;    }
+<i>94</i>&nbsp;
+<i>95</i>&nbsp;    public void setType(String type) {
+<b class="nc"><i>96</i>&nbsp;        this.type = type;</b>
+<b class="nc"><i>97</i>&nbsp;    }</b>
+<i>98</i>&nbsp;
+<i>99</i>&nbsp;    public String getTitle() {
+<b class="nc"><i>100</i>&nbsp;        return title;</b>
+<i>101</i>&nbsp;    }
+<i>102</i>&nbsp;
+<i>103</i>&nbsp;    public void setTitle(String title) {
+<b class="nc"><i>104</i>&nbsp;        this.title = title;</b>
+<b class="nc"><i>105</i>&nbsp;    }</b>
+<i>106</i>&nbsp;
+<i>107</i>&nbsp;    public String getAbstract() {
+<b class="fc"><i>108</i>&nbsp;        return _abstract;</b>
+<i>109</i>&nbsp;    }
+<i>110</i>&nbsp;
+<i>111</i>&nbsp;    public void setAbstract(String _abstract) {
+<b class="fc"><i>112</i>&nbsp;        this._abstract = _abstract;</b>
+<b class="fc"><i>113</i>&nbsp;    }</b>
+<i>114</i>&nbsp;
+<i>115</i>&nbsp;    public String getPublishedDate() {
+<b class="fc"><i>116</i>&nbsp;        return publishedDate;</b>
+<i>117</i>&nbsp;    }
+<i>118</i>&nbsp;
+<i>119</i>&nbsp;    public void setPublishedDate(String publishedDate) {
+<b class="fc"><i>120</i>&nbsp;        this.publishedDate = publishedDate;</b>
+<b class="fc"><i>121</i>&nbsp;    }</b>
+<i>122</i>&nbsp;
+<i>123</i>&nbsp;    public String getSource() {
+<b class="fc"><i>124</i>&nbsp;        return source;</b>
+<i>125</i>&nbsp;    }
+<i>126</i>&nbsp;
+<i>127</i>&nbsp;    public void setSource(String source) {
+<b class="fc"><i>128</i>&nbsp;        this.source = source;</b>
+<b class="fc"><i>129</i>&nbsp;    }</b>
+<i>130</i>&nbsp;
+<i>131</i>&nbsp;    public Long getId() {
+<b class="fc"><i>132</i>&nbsp;        return id;</b>
+<i>133</i>&nbsp;    }
+<i>134</i>&nbsp;
+<i>135</i>&nbsp;    public void setId(Long id) {
+<b class="fc"><i>136</i>&nbsp;        this.id = id;</b>
+<b class="fc"><i>137</i>&nbsp;    }</b>
+<i>138</i>&nbsp;
+<i>139</i>&nbsp;    public Long getAssetId() {
+<b class="fc"><i>140</i>&nbsp;        return assetId;</b>
+<i>141</i>&nbsp;    }
+<i>142</i>&nbsp;
+<i>143</i>&nbsp;    public void setAssetId(Long assetId) {
+<b class="fc"><i>144</i>&nbsp;        this.assetId = assetId;</b>
+<b class="fc"><i>145</i>&nbsp;    }</b>
+<i>146</i>&nbsp;
+<i>147</i>&nbsp;    public Integer getViews() {
+<b class="nc"><i>148</i>&nbsp;        return views;</b>
+<i>149</i>&nbsp;    }
+<i>150</i>&nbsp;
+<i>151</i>&nbsp;    public void setViews(Integer views) {
+<b class="nc"><i>152</i>&nbsp;        this.views = views;</b>
+<b class="nc"><i>153</i>&nbsp;    }</b>
+<i>154</i>&nbsp;
+<i>155</i>&nbsp;
+<i>156</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2019-06-20 22:45</div>
+</div>
+</body>
+</html>

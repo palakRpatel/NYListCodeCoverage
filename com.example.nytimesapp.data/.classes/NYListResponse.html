@@ -1,0 +1,143 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: NYListResponse</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.example.nytimesapp.data</a> ]
+</div>
+
+<h1>Coverage Summary for Class: NYListResponse (com.example.nytimesapp.data)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">NYListResponse</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (9/ 9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (14/ 14)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">NYListResponse$$EnhancerByMockitoWithCGLIB$$2d4cad00</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (9/ 9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (14/ 14)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.example.nytimesapp.data;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import com.google.gson.annotations.SerializedName;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;import java.util.List;
+<i>6</i>&nbsp;
+<b class="fc"><i>7</i>&nbsp;public class NYListResponse {</b>
+<i>8</i>&nbsp;    @SerializedName(&quot;status&quot;)
+<i>9</i>&nbsp;    private String status;
+<i>10</i>&nbsp;    @SerializedName(&quot;copyright&quot;)
+<i>11</i>&nbsp;    private String copyright;
+<i>12</i>&nbsp;    @SerializedName(&quot;num_results&quot;)
+<i>13</i>&nbsp;    private Integer numResults;
+<b class="fc"><i>14</i>&nbsp;    @SerializedName(&quot;results&quot;)</b>
+<i>15</i>&nbsp;    private List&lt;Result&gt; results = null;
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;
+<i>18</i>&nbsp;    public String getStatus() {
+<b class="fc"><i>19</i>&nbsp;        return status;</b>
+<i>20</i>&nbsp;    }
+<i>21</i>&nbsp;
+<i>22</i>&nbsp;    public void setStatus(String status) {
+<b class="fc"><i>23</i>&nbsp;        this.status = status;</b>
+<b class="fc"><i>24</i>&nbsp;    }</b>
+<i>25</i>&nbsp;
+<i>26</i>&nbsp;    public String getCopyright() {
+<b class="fc"><i>27</i>&nbsp;        return copyright;</b>
+<i>28</i>&nbsp;    }
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;    public void setCopyright(String copyright) {
+<b class="fc"><i>31</i>&nbsp;        this.copyright = copyright;</b>
+<b class="fc"><i>32</i>&nbsp;    }</b>
+<i>33</i>&nbsp;
+<i>34</i>&nbsp;    public Integer getNumResults() {
+<b class="fc"><i>35</i>&nbsp;        return numResults;</b>
+<i>36</i>&nbsp;    }
+<i>37</i>&nbsp;
+<i>38</i>&nbsp;    public void setNumResults(Integer numResults) {
+<b class="fc"><i>39</i>&nbsp;        this.numResults = numResults;</b>
+<b class="fc"><i>40</i>&nbsp;    }</b>
+<i>41</i>&nbsp;
+<i>42</i>&nbsp;    public List&lt;Result&gt; getResults() {
+<b class="fc"><i>43</i>&nbsp;        return results;</b>
+<i>44</i>&nbsp;    }
+<i>45</i>&nbsp;
+<i>46</i>&nbsp;    public void setResults(List&lt;Result&gt; results) {
+<b class="fc"><i>47</i>&nbsp;        this.results = results;</b>
+<b class="fc"><i>48</i>&nbsp;    }</b>
+<i>49</i>&nbsp;
+<i>50</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2019-06-20 22:45</div>
+</div>
+</body>
+</html>

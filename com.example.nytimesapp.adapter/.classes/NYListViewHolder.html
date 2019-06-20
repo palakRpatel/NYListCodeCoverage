@@ -1,0 +1,157 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: NYListViewHolder</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.example.nytimesapp.adapter</a> ]
+</div>
+
+<h1>Coverage Summary for Class: NYListViewHolder (com.example.nytimesapp.adapter)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">NYListViewHolder</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 21)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">NYListViewHolder$$EnhancerByMockitoWithCGLIB$$a5afc571</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 21)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.example.nytimesapp.adapter;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import android.content.Intent;
+<i>4</i>&nbsp;import android.view.View;
+<i>5</i>&nbsp;import android.widget.TextView;
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;import androidx.annotation.NonNull;
+<i>8</i>&nbsp;import androidx.recyclerview.widget.RecyclerView;
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;import com.example.nytimesapp.NYTimesListDetailsActivity;
+<i>11</i>&nbsp;import com.example.nytimesapp.R;
+<i>12</i>&nbsp;import com.example.nytimesapp.data.Result;
+<i>13</i>&nbsp;
+<i>14</i>&nbsp;public class NYListViewHolder extends RecyclerView.ViewHolder implements NyListAdapterContract.View, View.OnClickListener {
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;    private TextView txtTitle, txtDate, txtDescription;
+<i>17</i>&nbsp;    private NYListAdapterPresenter nyListAdapterPresenter;
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;    public NYListViewHolder(@NonNull View itemView, NYListAdapterPresenter presenter) {
+<b class="nc"><i>20</i>&nbsp;        super(itemView);</b>
+<b class="nc"><i>21</i>&nbsp;        txtTitle = itemView.findViewById(R.id.txt_name);</b>
+<b class="nc"><i>22</i>&nbsp;        txtDate = itemView.findViewById(R.id.txt_date);</b>
+<b class="nc"><i>23</i>&nbsp;        txtDescription = itemView.findViewById(R.id.txt_description);</b>
+<b class="nc"><i>24</i>&nbsp;        this.nyListAdapterPresenter = presenter;</b>
+<b class="nc"><i>25</i>&nbsp;        itemView.setOnClickListener(this);</b>
+<b class="nc"><i>26</i>&nbsp;    }</b>
+<i>27</i>&nbsp;
+<i>28</i>&nbsp;
+<i>29</i>&nbsp;    @Override
+<i>30</i>&nbsp;    public void setTitle(String title) {
+<b class="nc"><i>31</i>&nbsp;        txtTitle.setText(title);</b>
+<b class="nc"><i>32</i>&nbsp;    }</b>
+<i>33</i>&nbsp;
+<i>34</i>&nbsp;    @Override
+<i>35</i>&nbsp;    public void setDate(String date) {
+<b class="nc"><i>36</i>&nbsp;        txtDate.setText(date);</b>
+<b class="nc"><i>37</i>&nbsp;    }</b>
+<i>38</i>&nbsp;
+<i>39</i>&nbsp;    @Override
+<i>40</i>&nbsp;    public void setAuthor(String author) {
+<i>41</i>&nbsp;
+<b class="nc"><i>42</i>&nbsp;    }</b>
+<i>43</i>&nbsp;
+<i>44</i>&nbsp;
+<i>45</i>&nbsp;    @Override
+<i>46</i>&nbsp;    public void onClick(View view) {
+<b class="nc"><i>47</i>&nbsp;        if (nyListAdapterPresenter != null) {</b>
+<b class="nc"><i>48</i>&nbsp;            nyListAdapterPresenter.onItemInteract(getAdapterPosition());</b>
+<i>49</i>&nbsp;        }
+<b class="nc"><i>50</i>&nbsp;    }</b>
+<i>51</i>&nbsp;
+<i>52</i>&nbsp;    @Override
+<i>53</i>&nbsp;    public void navigateDetailActivity(Result result) {
+<b class="nc"><i>54</i>&nbsp;        Intent intent = new Intent(itemView.getContext(), NYTimesListDetailsActivity.class);</b>
+<b class="nc"><i>55</i>&nbsp;        intent.putExtra(&quot;result&quot;, result);</b>
+<b class="nc"><i>56</i>&nbsp;        itemView.getContext().startActivity(intent);</b>
+<i>57</i>&nbsp;
+<b class="nc"><i>58</i>&nbsp;    }</b>
+<i>59</i>&nbsp;
+<i>60</i>&nbsp;    @Override
+<i>61</i>&nbsp;    public void setDescription(String byline) {
+<b class="nc"><i>62</i>&nbsp;        txtDescription.setText(byline);</b>
+<b class="nc"><i>63</i>&nbsp;    }</b>
+<i>64</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2019-06-20 22:45</div>
+</div>
+</body>
+</html>
